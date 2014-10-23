@@ -15,7 +15,7 @@
         "php": ">=5.3.2",
         "symfony/framework-bundle": "2.*",
         "symfony/yaml": "2.*",
-        "google/apiclient": "v1.0.1-beta"
+        "google/apiclient": "1.0.*@dev"
     },
     "require-dev": {
         "mockery/mockery": "*"
@@ -24,5 +24,4 @@
         "psr-0": { "HappyR\\Google\\ApiBundle": "" }
     },
     "target-dir": "HappyR/Google/ApiBundle"
-    
 }
