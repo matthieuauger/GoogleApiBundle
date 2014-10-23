@@ -57,8 +57,7 @@ happy_r_google_api:
   oauth2_client_id: 
   oauth2_client_secret: 
   oauth2_redirect_uri: 
-  developer_key: 
-  site_name: mysite.com
+  developer_key:
 ```
 
 

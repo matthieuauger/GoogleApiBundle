@@ -29,7 +29,10 @@ class GoogleClient
         $client->setClientId($config['oauth2_client_id']);
         $client->setClientSecret($config['oauth2_client_secret']);
         $client->setRedirectUri($config['oauth2_redirect_uri']);
-        $client->setDeveloperKey($config['developer_key']);
+
+        if (array_key_exists('developer_key', $config)) {
+            $client->setDeveloperKey($config['developer_key']);
+        }
 
         $this->client = $client;
     }

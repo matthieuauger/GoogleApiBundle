@@ -26,19 +26,14 @@ class Configuration implements ConfigurationInterface
             ->scalarNode('oauth2_client_id')->isRequired()->cannotBeEmpty()->end()
             ->scalarNode('oauth2_client_secret')->isRequired()->cannotBeEmpty()->end()
             ->scalarNode('oauth2_redirect_uri')->isRequired()->cannotBeEmpty()->end()
-            ->scalarNode('developer_key')->isRequired()->cannotBeEmpty()->end()
-            ->scalarNode('site_name')->isRequired()->cannotBeEmpty()->end()
+            ->scalarNode('developer_key')->end()
 
             ->scalarNode('authClass')->end()
             ->scalarNode('ioClass')->end()
             ->scalarNode('cacheClass')->end()
             ->scalarNode('basePath')->end()
             ->scalarNode('ioFileCache_directory')->end()
-          //end rootnode children
           ->end();
-
-        //let use the api defaults
-        //$this->addServicesSection($rootNode);
 
         return $treeBuilder;
     }
@@ -141,7 +136,6 @@ class Configuration implements ConfigurationInterface
 
             //end services
             ->end()->end()
-
         ;
     }
 }
