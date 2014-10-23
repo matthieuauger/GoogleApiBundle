@@ -30,14 +30,16 @@ class GoogleClient
 
         $client = new \Google_Client($config);
 
-        $client -> setApplicationName($config['application_name']);
-        $client -> setClientId($config['oauth2_client_id']);
-        $client -> setClientSecret($config['oauth2_client_secret']);
-        $client -> setRedirectUri($config['oauth2_redirect_uri']);
-        $client -> setDeveloperKey($config['developer_key']);
+        $client->setApplicationName($config['application_name']);
+        $client->setClientId($config['oauth2_client_id']);
+        $client->setClientSecret($config['oauth2_client_secret']);
+        $client->setRedirectUri($config['oauth2_redirect_uri']);
 
-        $this -> client = $client;
+        if (array_key_exists('developer_key', $config)) {
+            $client->setDeveloperKey($config['developer_key']);
+        }
 
+        $this->client = $client;
     }
 
     /**
